@@ -1,5 +1,13 @@
-function App() {
-  return <div>App</div>;
-}
+import { GeneralInfoForm } from "./components/GeneralInfoForm";
+import { ExperienceForm } from "./components/ExperienceForm";
+import { EducationForm } from "./components/EducationForm";
 
-export default App;
+export function App() {
+  return (
+    <div>
+      <GeneralInfoForm />
+      <ExperienceForm />
+      <EducationForm />
+    </div>
+  );
+}
