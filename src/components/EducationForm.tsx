@@ -12,7 +12,9 @@ export function EducationForm({
       EducationForm:
       <div>
         {data.map((item) => (
-          <div>{item.title}</div>
+          <div key={item.id}>
+            <div>{item.title}</div>
+          </div>
         ))}
       </div>
     </div>

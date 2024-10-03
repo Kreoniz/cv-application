@@ -29,7 +29,7 @@ export function Resume({
 
           <div className="flex flex-col gap-2">
             {experience.map((item) => (
-              <div>
+              <div key={item.id}>
                 <div>
                   <div className="leading-4 font-bold text-lg">
                     {item.companyName}
@@ -53,7 +53,7 @@ export function Resume({
 
           <div className="flex flex-col gap-2">
             {education.map((item) => (
-              <div>
+              <div key={item.id}>
                 <div>
                   <div className="leading-4 font-bold text-lg">
                     {item.schoolName}
