@@ -15,7 +15,7 @@ export function Resume({
     <div className="w-full h-full">
       <h1 className="font-bold text-2xl text-center mb-2">{title}</h1>
 
-      <div className="w-full h-full px-8 py-4 bg-white shadow-lg flex flex-col gap-2">
+      <div className="rounded-md w-full h-full px-8 py-4 bg-white shadow-lg flex flex-col gap-2">
         <div className="text-lg flex justify-center gap-2">
           <div>{generalInfo.name}</div>
           <div>{generalInfo.email}</div>
