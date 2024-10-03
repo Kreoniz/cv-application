@@ -61,7 +61,7 @@ export function ExperienceForm({
               </label>
 
               <input
-                placeholder="Arthur Dent"
+                placeholder="Zaphod Inc."
                 type="text"
                 id="name"
                 className="w-full rounded border-2 py-1 px-2"
