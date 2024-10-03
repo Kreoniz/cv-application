@@ -1,5 +1,6 @@
 import { IExperienceItem } from "../types";
 import { CrossIcon } from "../icons/cross";
+import { PlusIcon } from "../icons/plus";
 
 export function ExperienceForm({
   data,
@@ -30,11 +31,25 @@ export function ExperienceForm({
     setData(updatedData);
   }
 
+  function addItem(): void {
+    setData([
+      ...data,
+      {
+        id: Date.now(),
+        companyName: "",
+        position: "",
+        description: "",
+        startDate: "",
+        endDate: "",
+      },
+    ]);
+  }
+
   return (
     <div className="bg-white rounded-md shadow-lg p-4">
       <div className="font-bold text-xl mb-2">Experience:</div>
 
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-3">
         {data.map((item) => (
           <div
             key={item.id}
@@ -133,6 +148,13 @@ export function ExperienceForm({
             </button>
           </div>
         ))}
+
+        <button
+          className="w-full rounded-md border-2 flex justify-center items-center gap-2 p-2 hover:bg-slate-200 transition-colors"
+          onClick={() => addItem()}
+        >
+          <PlusIcon /> Create an Item
+        </button>
       </div>
     </div>
   );
