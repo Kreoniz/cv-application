@@ -21,7 +21,7 @@ export function GeneralInfoForm({
             placeholder="Arthur Dent"
             type="text"
             id="name"
-            className="rounded border-2 py-1 px-2"
+            className="w-full rounded border-2 py-1 px-2"
             value={data.name}
             onChange={(e) => setData({ ...data, name: e.target.value })}
           />
@@ -35,7 +35,7 @@ export function GeneralInfoForm({
             placeholder="arthur_dent@universe.com"
             type="email"
             id="email"
-            className="rounded border-2 py-1 px-2"
+            className="w-full rounded border-2 py-1 px-2"
             value={data.email}
             onChange={(e) => setData({ ...data, email: e.target.value })}
           />
@@ -49,7 +49,7 @@ export function GeneralInfoForm({
             placeholder="contact me via a babel fish"
             type="tel"
             id="name"
-            className="rounded border-2 py-1 px-2"
+            className="w-full rounded border-2 py-1 px-2"
             value={data.phone}
             onChange={(e) => setData({ ...data, phone: e.target.value })}
           />

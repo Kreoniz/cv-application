@@ -53,7 +53,7 @@ export function ExperienceForm({
         {data.map((item) => (
           <div
             key={item.id}
-            className="rounded-md border-2 p-4 flex flex-col gap-2 relative"
+            className="rounded-md border-2 p-2 flex flex-col gap-2 relative"
           >
             <div>
               <label className="font-bold text-lg" htmlFor="name">
@@ -64,7 +64,7 @@ export function ExperienceForm({
                 placeholder="Arthur Dent"
                 type="text"
                 id="name"
-                className="rounded border-2 py-1 px-2"
+                className="w-full rounded border-2 py-1 px-2"
                 value={item.companyName}
                 onChange={(e) =>
                   updateField(item.id, "companyName", e.target.value)
@@ -81,7 +81,7 @@ export function ExperienceForm({
                 placeholder="01.03.1999"
                 type="text"
                 id="startDate"
-                className="rounded border-2 py-1 px-2"
+                className="w-full rounded border-2 py-1 px-2"
                 value={item.startDate}
                 onChange={(e) =>
                   updateField(item.id, "startDate", e.target.value)
@@ -98,7 +98,7 @@ export function ExperienceForm({
                 placeholder="01.03.1999"
                 type="text"
                 id="endDate"
-                className="rounded border-2 py-1 px-2"
+                className="w-full rounded border-2 py-1 px-2"
                 value={item.endDate}
                 onChange={(e) =>
                   updateField(item.id, "endDate", e.target.value)
@@ -115,7 +115,7 @@ export function ExperienceForm({
                 placeholder="Software Engineer"
                 type="text"
                 id="position"
-                className="rounded border-2 py-1 px-2"
+                className="w-full rounded border-2 py-1 px-2"
                 value={item.position}
                 onChange={(e) =>
                   updateField(item.id, "position", e.target.value)
@@ -131,7 +131,7 @@ export function ExperienceForm({
               <textarea
                 placeholder="Highly adaptable and resourceful software engineer with experience in developing innovative solutions under extreme pressure. Skilled in navigating complex systems, collaborating with diverse teams, and finding creative workarounds to seemingly insurmountable problems. Key Skills:"
                 id="name"
-                className="rounded border-2 py-1 px-2"
+                className="text-sm w-full min-h-20 rounded border-2 py-1 px-2"
                 value={item.description}
                 onChange={(e) =>
                   updateField(item.id, "description", e.target.value)
