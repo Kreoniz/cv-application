@@ -23,7 +23,7 @@ export function App() {
   );
 
   return (
-    <div className="w-screen h-screen bg-lime-100 ">
+    <div className="w-screen h-full min-h-screen bg-lime-100">
       <div className="m-auto max-w-[1200px] p-4 gap-4 flex justify-between max-lg:flex-col max-lg:items-center">
         <div className="flex flex-col gap-4">
           <div className="bg-white rounded-md shadow-lg p-4">

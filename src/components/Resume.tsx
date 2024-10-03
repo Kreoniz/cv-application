@@ -12,11 +12,11 @@ export function Resume({
   education: IEducationItem[];
 }) {
   return (
-    <div className="w-full h-full">
+    <div>
       <h1 className="font-bold text-2xl text-center mb-2">{title}</h1>
 
-      <div className="rounded-md w-full h-full px-8 py-4 bg-white shadow-lg flex flex-col gap-2">
-        <div className="text-lg flex justify-center gap-2">
+      <div className="rounded-md w-full h-full px-8 pt-4 pb-8 bg-white shadow-lg flex flex-col gap-2">
+        <div className="text-lg flex justify-center items-center gap-2">
           <div>{generalInfo.name}</div>
           <div>{generalInfo.email}</div>
           <div>{generalInfo.phone}</div>
