@@ -23,25 +23,38 @@ export function App() {
   );
 
   return (
-    <div className="w-screen h-screen bg-lime-100 flex flex-col gap-4">
-      <input
-        type="text"
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-      />
+    <div className="w-screen h-screen bg-lime-100 ">
+      <div className="m-auto max-w-[1200px] p-4 gap-4 flex justify-between max-lg:flex-col max-lg:items-center">
+        <div className="flex flex-col gap-4">
+          <div>
+            <label className="flex items-center gap-2">
+              <span>CV Title:</span>
+            </label>
 
-      <GeneralInfoForm data={generalInfo} setData={setGeneralInfo} />
+            <input
+              className="rounded border-2 py-1 px-2"
+              type="text"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+            />
+          </div>
 
-      <ExperienceForm data={experience} setData={setExperience} />
+          <GeneralInfoForm data={generalInfo} setData={setGeneralInfo} />
 
-      <EducationForm data={education} setData={setEducation} />
+          <ExperienceForm data={experience} setData={setExperience} />
 
-      <Resume
-        title={title}
-        generalInfo={generalInfo}
-        experience={experience}
-        education={education}
-      />
+          <EducationForm data={education} setData={setEducation} />
+        </div>
+
+        <div>
+          <Resume
+            title={title}
+            generalInfo={generalInfo}
+            experience={experience}
+            education={education}
+          />
+        </div>
+      </div>
     </div>
   );
 }
