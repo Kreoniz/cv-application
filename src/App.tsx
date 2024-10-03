@@ -27,11 +27,9 @@ export function App() {
       <div className="m-auto max-w-[1200px] p-4 gap-4 flex justify-between max-lg:flex-col max-lg:items-center">
         <div className="flex flex-col gap-4">
           <div>
-            <label className="flex items-center gap-2">
-              <span>CV Title:</span>
-            </label>
-
+            <label htmlFor="title">CV Title:</label>
             <input
+              id="title"
               className="rounded border-2 py-1 px-2"
               type="text"
               value={title}
