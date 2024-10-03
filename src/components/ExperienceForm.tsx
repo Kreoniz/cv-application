@@ -49,6 +49,73 @@ export function ExperienceForm({
                 }
               />
             </div>
+
+            <div>
+              <label className="font-bold text-lg" htmlFor="startDate">
+                Start Date:
+              </label>
+
+              <input
+                placeholder="01.03.1999"
+                type="text"
+                id="startDate"
+                className="rounded border-2 py-1 px-2"
+                value={item.startDate}
+                onChange={(e) =>
+                  updateField(item.id, "startDate", e.target.value)
+                }
+              />
+            </div>
+
+            <div>
+              <label className="font-bold text-lg" htmlFor="endDate">
+                End Date:
+              </label>
+
+              <input
+                placeholder="01.03.1999"
+                type="text"
+                id="endDate"
+                className="rounded border-2 py-1 px-2"
+                value={item.endDate}
+                onChange={(e) =>
+                  updateField(item.id, "endDate", e.target.value)
+                }
+              />
+            </div>
+
+            <div>
+              <label className="font-bold text-lg" htmlFor="position">
+                Position:
+              </label>
+
+              <input
+                placeholder="Software Engineer"
+                type="text"
+                id="position"
+                className="rounded border-2 py-1 px-2"
+                value={item.position}
+                onChange={(e) =>
+                  updateField(item.id, "position", e.target.value)
+                }
+              />
+            </div>
+
+            <div>
+              <label className="font-bold text-lg" htmlFor="description">
+                Description:
+              </label>
+
+              <textarea
+                placeholder="Highly adaptable and resourceful software engineer with experience in developing innovative solutions under extreme pressure. Skilled in navigating complex systems, collaborating with diverse teams, and finding creative workarounds to seemingly insurmountable problems. Key Skills:"
+                id="name"
+                className="rounded border-2 py-1 px-2"
+                value={item.description}
+                onChange={(e) =>
+                  updateField(item.id, "description", e.target.value)
+                }
+              ></textarea>
+            </div>
           </div>
         ))}
       </div>
