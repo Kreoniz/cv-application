@@ -1,4 +1,5 @@
 import { IExperienceItem } from "../types";
+import { CrossIcon } from "../icons/cross";
 
 export function ExperienceForm({
   data,
@@ -23,6 +24,12 @@ export function ExperienceForm({
     setData(updatedData);
   }
 
+  function deleteItem(id: number): void {
+    const updatedData = data.filter((item) => id !== item.id);
+
+    setData(updatedData);
+  }
+
   return (
     <div className="bg-white rounded-md shadow-lg p-4">
       <div className="font-bold text-xl mb-2">Experience:</div>
@@ -31,7 +38,7 @@ export function ExperienceForm({
         {data.map((item) => (
           <div
             key={item.id}
-            className="rounded-md border-2 p-2 flex flex-col gap-2"
+            className="rounded-md border-2 p-4 flex flex-col gap-2 relative"
           >
             <div>
               <label className="font-bold text-lg" htmlFor="name">
@@ -116,6 +123,14 @@ export function ExperienceForm({
                 }
               ></textarea>
             </div>
+
+            <button
+              type="button"
+              className="m-1 p-1 absolute top-0 right-0 rounded-md hover:bg-slate-200 transition-colors"
+              onClick={() => deleteItem(item.id)}
+            >
+              <CrossIcon />
+            </button>
           </div>
         ))}
       </div>
